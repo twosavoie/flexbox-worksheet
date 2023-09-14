@@ -36,6 +36,8 @@ section#justify-content-section {
   justify-content: flex-end;
 }
 
+/* end justify-content */
+
 /* align-items */
 section#align-items-section {
   display: flex;
@@ -72,6 +74,119 @@ section#align-items-section {
   align-items: flex-end;
 }
 
+/* end align-items */
+
+/* flex-wrap */
+section#flex-wrap-section {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-wrap-nowrap-parent-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flex-wrap-wrap-parent-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.flex-wrap-wrap-reverse-parent-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap-reverse;
+}
+
+/* end flex-wrap */
+
+/* align-content */
+section#align-content-section {
+  display: flex;
+  justify-content: center;
+}
+
+/* Fixed heights have been set in the .wrap-content-parent-container code blocks */
+
+.align-content-center-parent-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-wrap: wrap;
+  height: 250px;
+}
+
+.align-content-space-between-parent-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: space-between;
+  flex-wrap: wrap;
+  height: 250px;
+}
+
+.align-content-space-around-parent-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+
+.align-content-space-evenly-parent-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.align-content-stretch-parent-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: stretch;
+  flex-wrap: wrap;
+}
+
+.align-content-flex-start-parent-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.align-content-flex-end-parent-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: flex-end;
+  flex-wrap: wrap;
+}
+
+/* end align-content */
+
+/* gap */
+section#gap-section {
+  display: flex;
+  justify-content: center;
+}
+
+.gap-parent-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.row-gap-parent-container {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+}
+
+.column-gap-parent-container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+}
+
+/* end gap */
 
 /* Worksheet styles */
 /* Global styles */
@@ -138,7 +253,12 @@ section {
   padding: 2px 0;
 }
 
-/* This classname may change if used for multiple sections. Maybe child-block. */
+.wrap-content-parent-container {
+  background-color: #ede4f6;
+  padding: 2px 0;
+  height: 100px;
+}
+
 .child-box {
   height: 25px;
   width: 25%;
@@ -148,6 +268,13 @@ section {
 
 .child-text-box {
   padding: 10px;
+  outline: 2px solid #aeaeef;
+  background: #c4d6f7;
+}
+
+.child-wrap-box {
+  height: 25px;
+  width: 30%;
   outline: 2px solid #aeaeef;
   background: #c4d6f7;
 }
@@ -176,7 +303,25 @@ section {
     width: 80%;
   }
 
+  .example-parent {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+
+  .example-child {
+    width: 30%;
+  }
+
+  .wrap-content-parent-container {
+    height: 150px;
+  }
+
   .child-box {
+    height: 50px;
+  }
+
+  .child-wrap-box {
     height: 50px;
   }
 
@@ -210,7 +355,15 @@ section {
     width: 70%;
   }
 
+  .wrap-content-parent-container {
+    height: 200px;
+  }
+
   .child-box {
+    height: 75px;
+  }
+
+  .child-wrap-box {
     height: 75px;
   }
 }
