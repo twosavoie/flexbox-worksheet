@@ -105,50 +105,66 @@
         <p>Adding the <strong>align-items</strong> property to the parent container positions child items along the
           cross axis.</p>
         <p> When in the default
-          row orientation, the child items will be vertical, from top to bottom ⬇︎.</p>
-        <p>If the orientation is changed to column, the child
-          items will be horizontal, from left to right ➡︎.</p>
+          row orientation, the cross axis will be vertical, from top to bottom ⬇︎.</p>
+        <p>If the orientation is changed to column, the cross axis will be horizontal, from left to right ➡︎.</p>
         <p>The default position is <strong>flex-start</strong>.</p>
       </div>
-      <h3>center</h3>
-      <p>Positions elements in the center of the parent container. Any space within the container, not taken up by the
-        content, will be evenly divided on the outside of the items without any spacing between the elements.
-      </p>
-      <div class="align-items-center-parent-container content-parent-container">
-        <p class="child-text-box box-1">↓<br>--<br>↑</p>
-        <p class="child-text-box box-2">At the content's center</p>
-      </div>
-      <h3>stretch</h3>
-      <p class="property-description">Items stretch to fill the parent container.</p>
-      <div class="align-items-stretch-parent-container content-parent-container">
-        <p class="child-text-box box-1">↑<br>↓</p>
-        <p class="child-text-box box-2">Stretch to fill the container</p>
-      </div>
-      <h3>baseline</h3>
-      <p class="property-description">Items are aligned at the content's baseline. This is helpful for aligning items of
-        different heights or
-        font-sizes at the bottom of the image or first line of text.</p>
-      <p>If there are multiple lines of text of the same font-size the baseline is the bottom of the first row of text.
-      </p>
-      <div class="align-items-baseline-parent-container content-parent-container">
-        <p class="child-text-box box-1">__</p>
-        <p class="child-text-box box-2">At the baseline</p>
-      </div>
-      <h3>flex-start</h3>
-      <p class="property-description">Positions elements at the beginning of the container. If the cross axis is
-        vertical, it will position it at the
-        top. If it is horizontal, it will position it to the left.</p>
-      <div class="align-items-flex-start-parent-container content-parent-container">
-        <p class="child-text-box box-1">↑<br>↑</p>
-        <p class="child-text-box box-2">At the start of the container</p>
-      </div>
-      <h3>flex-end</h3>
-      <p class="property-description">Positions elements at the end of the container. If the cross axis is vertical, it
-        will position it at the
-        bottom. If the cross axis is horizontal, it will position it to the right.</p>
-      <div class="align-items-flex-end-parent-container content-parent-container">
-        <p class="child-text-box box-1">↓<br>↓</p>
-        <p class="child-text-box box-2">At the end of the container</p>
+      <div class="two-column-layout">
+        <div class="two-column-child">
+          <h3>center</h3>
+          <p>Positions elements in the center of the parent container along the cross axis. Any space within the
+            container, not taken up by the
+            content, will be evenly divided on the outside of the items without any spacing between the elements.
+          </p>
+          <div class="align-items-center-parent-container content-parent-container">
+            <p class="child-text-box box-1">↓<br>--<br>↑</p>
+            <p class="child-text-box box-2">At the content's center</p>
+          </div>
+        </div>
+        <div class="two-column-child">
+          <h3>stretch</h3>
+          <p class="property-description">Items stretch to fill the parent container.</p>
+          <div class="align-items-stretch-parent-container content-parent-container">
+            <p class="child-text-box box-1">↑<br>↓</p>
+            <p class="child-text-box box-2">Stretch to fill the container</p>
+          </div>
+        </div>
+        <div class="two-column-child">
+          <h3>baseline</h3>
+          <p class="property-description">Items are aligned at the content's baseline. This is helpful for aligning
+            items
+            of
+            different heights or
+            font-sizes at the bottom of the image or first line of text.</p>
+          <p>If there are multiple lines of text of the same font-size the baseline is the bottom of the first row of
+            text.
+          </p>
+          <div class="align-items-baseline-parent-container content-parent-container">
+            <p class="child-text-box box-1">__</p>
+            <p class="child-text-box box-2">At the baseline</p>
+          </div>
+        </div>
+        <div class="two-column-child">
+          <h3>flex-start</h3>
+          <p class="property-description">Positions elements at the beginning of the container. If the cross axis is
+            vertical, it will position it at the
+            top. If it is horizontal, it will position it to the left.</p>
+          <div class="align-items-flex-start-parent-container content-parent-container">
+            <p class="child-text-box box-1">↑<br>↑</p>
+            <p class="child-text-box box-2">At the start of the container</p>
+          </div>
+        </div>
+        <div class="two-column-child">
+          <h3>flex-end</h3>
+          <p class="property-description">Positions elements at the end of the container. If the cross axis is vertical,
+            it
+            will position it at the
+            bottom. If the cross axis is horizontal, it will position it to the right.</p>
+          <div class="align-items-flex-end-parent-container content-parent-container">
+            <p class="child-text-box box-1">↓<br>↓</p>
+            <p class="child-text-box box-2">At the end of the container</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -167,8 +183,8 @@
           items will be vertical, from top to bottom ⬇︎.</p>
         <p>The default position is <strong>flex-start</strong>.</p>
       </div>
-      <div class="example-parent">
-        <div class="example-child">
+      <div class="three-column-layout">
+        <div class="three-column-child">
           <h3>nowrap</h3>
           <p>The default value for flex-wrap. All of the items are in the same row on the
             main
@@ -182,7 +198,7 @@
             <div class="child-wrap-box"></div>
           </div>
         </div>
-        <div class="example-child">
+        <div class="three-column-child">
           <h3>wrap</h3>
           <p>Using the width of the items and the parent container, as each row fills, the
             next
@@ -194,7 +210,7 @@
             <div class="child-wrap-box"></div>
           </div>
         </div>
-        <div class="example-child">
+        <div class="three-column-child">
           <h3>wrap-reverse</h3>
           <p>Using the width of the items and the parent container, as each row fills, the
             next
@@ -224,8 +240,8 @@
           items will be vertical, from top to bottom ⬇︎.</p>
         <p>The default position is <strong>flex-start</strong>.</p>
       </div>
-      <div class="example-parent">
-        <div class="example-child">
+      <div class="three-column-layout">
+        <div class="three-column-child">
           <h3>center</h3>
           <p></p>
           <div class="align-content-center-parent-container wrap-content-parent-container">
@@ -237,7 +253,7 @@
             <div class="child-wrap-box"></div>
           </div>
         </div>
-        <div class="example-child">
+        <div class="three-column-child">
           <h3>space-between</h3>
           <p></p>
           <div class="align-content-space-between-parent-container wrap-content-parent-container">
@@ -249,7 +265,7 @@
             <div class="child-wrap-box"></div>
           </div>
         </div>
-        <div class="example-child">
+        <div class="three-column-child">
           <h3>space-around</h3>
           <p></p>
           <div class="align-content-space-around-parent-container wrap-content-parent-container">
@@ -261,7 +277,7 @@
             <div class="child-wrap-box"></div>
           </div>
         </div>
-        <div class="example-child">
+        <div class="three-column-child">
           <h3>space-evenly</h3>
           <p></p>
           <div class="align-content-space-evenly-parent-container wrap-content-parent-container">
@@ -273,7 +289,7 @@
             <div class="child-wrap-box"></div>
           </div>
         </div>
-        <div class="example-child">
+        <div class="three-column-child">
           <h3>stretch</h3>
           <p>Items fill the cross axis. Items with a fixed height can overflow their parent container.</p>
           <div class="align-content-flex-start-parent-container wrap-content-parent-container">
@@ -288,7 +304,7 @@
             <div class="child-wrap-box"></div>
           </div>
         </div>
-        <div class="example-child">
+        <div class="three-column-child">
           <h3>flex-start</h3>
           <p></p>
           <div class="align-content-flex-start-parent-container wrap-content-parent-container">
@@ -300,7 +316,7 @@
             <div class="child-wrap-box"></div>
           </div>
         </div>
-        <div class="example-child">
+        <div class="three-column-child">
           <h3>flex-end</h3>
           <p></p>
           <div class="align-content-flex-end-parent-container wrap-content-parent-container">
@@ -330,8 +346,8 @@
           items will be vertical, from top to bottom ⬇︎.</p>
         <p>The default position is <strong>flex-start</strong>.</p>
       </div>
-      <div class="example-parent">
-        <div class="example-child">
+      <div class="three-column-layout">
+        <div class="three-column-child">
           <h3>gap</h3>
           <p></p>
           <div class="gap-parent-container content-parent-container">
@@ -343,7 +359,7 @@
             <div class="child-wrap-box"></div>
           </div>
         </div>
-        <div class="example-child">
+        <div class="three-column-child">
           <h3>row-gap</h3>
           <p></p>
           <div class="row-gap-parent-container content-parent-container">
@@ -355,7 +371,7 @@
             <div class="child-wrap-box"></div>
           </div>
         </div>
-        <div class="example-child">
+        <div class="three-column-child">
           <h3>column-gap</h3>
           <p></p>
           <div class="column-gap-parent-container content-parent-container">
