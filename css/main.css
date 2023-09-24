@@ -244,40 +244,40 @@ section#flex-flow-section {
   justify-content: center;
 }
 
-.flex-flow-justify-content-center-parent-container {
+.flex-flow-row-nowrap-parent-container {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
 }
 
-.flex-flow-justify-content-space-between-parent-container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-}
-
-.flex-flow-justify-content-space-around-parent-container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-}
-
-.flex-flow-justify-content-space-evenly-parent-container {
+.flex-flow-row-wrap-parent-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
 }
 
-.flex-flow-justify-content-flex-start-parent-container {
+.flex-flow-row-wrap-reverse-parent-container {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
+  flex-flow: row wrap-reverse;
+  justify-content: space-evenly;
 }
 
-.flex-flow-justify-content-flex-end-parent-container {
+.flex-flow-column-nowrap-parent-container {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+}
+
+.flex-flow-column-wrap-parent-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+}
+
+.flex-flow-column-wrap-reverse-parent-container {
+  display: flex;
+  flex-flow: column wrap-reverse;
+  justify-content: space-evenly;
 }
 
 /* end flex-flow */
@@ -358,6 +358,12 @@ section {
   height: 150px;
 }
 
+.flex-flow-content-parent-container {
+  background-color: #ede4f6;
+  padding: 2px 0;
+  height: 100px;
+}
+
 .child-box {
   height: 25px;
   width: 25%;
@@ -376,8 +382,9 @@ section {
   width: 30%;
   outline: 2px solid #aeaeef;
   background: #c4d6f7;
-  padding: 10px;
-  /* text-align: center; Maybe???? */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .child-direction-box {
@@ -394,11 +401,6 @@ section {
 
 .box-2 {
   font-size: 1rem;
-  margin: 0;
-}
-
-.box-3 {
-  font-size: 3rem;
   margin: 0;
 }
 
@@ -439,6 +441,10 @@ section {
     height: 200px;
   }
 
+  .flex-flow-content-parent-container {
+    height: 200px;
+  }
+
   .child-box {
     height: 50px;
   }
@@ -452,20 +458,14 @@ section {
   }
 
   .box-1 {
-    font-size: 2rem;
     margin: 0;
   }
 
   .box-2 {
     width: 60%;
-    font-size: 1rem;
     margin: 0;
   }
 
-  .box-3 {
-    font-size: 3rem;
-    margin: 0;
-  }
 }
 
 @media (min-width: 1200px) {
