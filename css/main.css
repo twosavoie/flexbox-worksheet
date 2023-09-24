@@ -188,6 +188,101 @@ section#gap-section {
 
 /* end gap */
 
+/* flex-direction section */
+section#flex-direction-section {
+  display: flex;
+  justify-content: center;
+}
+
+.column-justify-content-center-parent-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.column-justify-content-space-between-parent-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.column-justify-content-space-around-parent-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.column-justify-content-space-evenly-parent-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.column-justify-content-flex-start-parent-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.column-justify-content-flex-end-parent-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* end flex-direction */
+
+/* flex-flow section */
+section#flex-flow-section {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-flow-justify-content-center-parent-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.flex-flow-justify-content-space-between-parent-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.flex-flow-justify-content-space-around-parent-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.flex-flow-justify-content-space-evenly-parent-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.flex-flow-justify-content-flex-start-parent-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.flex-flow-justify-content-flex-end-parent-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+
+/* end flex-flow */
+
+
 /* Worksheet styles */
 /* Global styles */
 * {
@@ -259,6 +354,10 @@ section {
   height: 100px;
 }
 
+#flex-direction-section .content-parent-container {
+  height: 150px;
+}
+
 .child-box {
   height: 25px;
   width: 25%;
@@ -275,6 +374,15 @@ section {
 .child-wrap-box {
   height: 25px;
   width: 30%;
+  outline: 2px solid #aeaeef;
+  background: #c4d6f7;
+  padding: 10px;
+  /* text-align: center; Maybe???? */
+}
+
+.child-direction-box {
+  height: 25px;
+  width: 75%;
   outline: 2px solid #aeaeef;
   background: #c4d6f7;
 }
@@ -327,11 +435,19 @@ section {
     height: 150px;
   }
 
+  #flex-direction-section .content-parent-container {
+    height: 200px;
+  }
+
   .child-box {
     height: 50px;
   }
 
   .child-wrap-box {
+    height: 50px;
+  }
+
+  .child-direction-box {
     height: 50px;
   }
 
@@ -369,11 +485,19 @@ section {
     height: 200px;
   }
 
+  #flex-direction-section .content-parent-container {
+    height: 300px;
+  }
+
   .child-box {
     height: 75px;
   }
 
   .child-wrap-box {
+    height: 75px;
+  }
+
+  .child-direction-box {
     height: 75px;
   }
 }
