@@ -785,51 +785,41 @@
       </div>
     </section>
     <!-- end order section -->
+
     <!-- align-self section -->
-        <section id="gap-section">
+    <section id="align-self-section">
       <div class="section-content-wrapper">
         <div class="description">
-          <h3>gap:</h3>
-          <p>Adding the <strong>gap</strong> creates space between elements</p>
-          <p>When used with another property, like <code>justify-content: space-between;</code>, it becomes a minimum
-            amount of
-            space.</p>
+          <h3>align-self:</h3>
+          <p>Adding the <strong>align-self</strong> property to child flex item allows you set its alignment.</p>
         </div>
-        <div class="three-column-layout">
-          <div class="three-column-child">
-            <h4>gap</h4>
-            <p></p>
-            <div class="gap-parent-container content-parent-container">
-              <div class="child-wrap-box"></div>
-              <div class="child-wrap-box"></div>
-              <div class="child-wrap-box"></div>
-              <div class="child-wrap-box"></div>
-              <div class="child-wrap-box"></div>
-              <div class="child-wrap-box"></div>
+        <div class="two-column-layout">
+          <div class="two-column-child">
+            <h4>before</h4>
+            <p>The flex parent container has <code>justify-content: space-around;</code> and <code>align-items: center;</code>. All three flex child items are aligned at their centers. 
+            </p>
+            <div class="align-self-parent-container content-parent-container">
+              <p class="child-align-self-box">Tart croissant tootsie roll.</p>
+              <p class="child-align-self-box">Tart croissant tootsie roll danish sweet roll halvah.</p>
+              <p class="child-align-self-box">Tart croissant tootsie roll danish sweet roll halvah. Gingerbread chocolate bar.</p>
             </div>
           </div>
-          <div class="three-column-child">
-            <h4>row-gap</h4>
-            <p></p>
-            <div class="row-gap-parent-container content-parent-container">
-              <div class="child-wrap-box"></div>
-              <div class="child-wrap-box"></div>
-              <div class="child-wrap-box"></div>
-              <div class="child-wrap-box"></div>
-              <div class="child-wrap-box"></div>
-              <div class="child-wrap-box"></div>
+          <div class="two-column-child">
+            <h4>after</h4>
+            <p class="property-description">Using the Flexbox align-self property the boxes are positioned individually.</p>
+            <p><strong>auto</strong> keeps the same align-items or align-content position.</p>
+            <div class="align-self-parent-container content-parent-container">
+              <p class="child-align-self-box align-self-child-flex-item-1"><strong>auto</strong><br>Tart croissant tootsie roll.</p>
+              <p class="child-align-self-box align-self-child-flex-item-2"><strong>flex-start</strong><br>Tart croissant tootsie roll danish sweet roll halvah.</p>
+              <p class="child-align-self-box align-self-child-flex-item-3"><strong>flex-end</strong><br>Tart croissant tootsie roll danish sweet roll halvah. Gingerbread chocolate bar.</p>
             </div>
           </div>
-          <div class="three-column-child">
-            <h4>column-gap</h4>
-            <p></p>
-            <div class="column-gap-parent-container content-parent-container">
-              <div class="child-wrap-box"></div>
-              <div class="child-wrap-box"></div>
-              <div class="child-wrap-box"></div>
-              <div class="child-wrap-box"></div>
-              <div class="child-wrap-box"></div>
-              <div class="child-wrap-box"></div>
+          <div class="two-column-child">
+            <h4>after</h4>
+            <div class="align-self-parent-container content-parent-container">
+              <p class="child-align-self-box align-self-child-flex-item-4"><strong>center</strong><br>Tart croissant tootsie roll.</p>
+              <p class="child-align-self-box align-self-child-flex-item-5"><strong>baseline</strong><br>Tart croissant tootsie roll danish sweet roll halvah.</p>
+              <p class="child-align-self-box align-self-child-flex-item-6"><strong>stetch</strong><br>Tart croissant tootsie roll danish sweet roll halvah. Gingerbread chocolate bar.</p>
             </div>
           </div>
         </div>
