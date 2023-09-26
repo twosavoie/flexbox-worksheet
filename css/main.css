@@ -282,6 +282,50 @@ section#flex-flow-section {
 
 /* end flex-flow */
 
+/* flex section */
+section#flex-content-section {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-row-parent-container {
+  display: flex;
+}
+
+.child-flex-basis-box {
+  flex-basis: 800px;
+  /* Can these be in a utility class? */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.child-flex-shrink-box {
+  flex-shrink: 0;
+  /* Need a new class so flex-basis isn't needed. It messes up the column. */
+  /* flex-basis: 800px; */
+  /* Can these be in a utility class? */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.child-flex-grow-box {
+  flex-grow: 1;
+    /* Can these be in a utility class? */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column-parent-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* End flex section */
+
 /* order */
 section#order-section {
   display: flex;
@@ -296,18 +340,23 @@ section#order-section {
 .order-child-flex-item-1 {
   order: 2;
 }
+
 .order-child-flex-item-2 {
   order: 4;
 }
+
 .order-child-flex-item-3 {
   order: 1;
 }
+
 .order-child-flex-item-4 {
   order: 5;
 }
+
 .order-child-flex-item-5 {
   order: 3;
 }
+
 /* end order */
 
 /* order */
@@ -324,21 +373,27 @@ section#align-self-section {
 .align-self-child-flex-item-1 {
   align-self: auto;
 }
+
 .align-self-child-flex-item-2 {
   align-self: flex-start;
 }
+
 .align-self-child-flex-item-3 {
   align-self: flex-end;
 }
+
 .align-self-child-flex-item-4 {
   align-self: center;
 }
+
 .align-self-child-flex-item-5 {
   align-self: baseline;
 }
+
 .align-self-child-flex-item-6 {
   align-self: stretch;
 }
+
 /* end order */
 
 
@@ -419,7 +474,7 @@ header nav p {
   margin-bottom: 50px;
 }
 
-header nav ul {
+nav ul {
   display: flex;
   flex-flow: row wrap;
   gap: 10px;
@@ -438,7 +493,7 @@ header nav ul {
   color: #c4d6f7;
   background-color: #c4d6f7;
   border: 2px solid #aeaeef;
-  padding: 0 20px;
+  padding: 0 28px;
 }
 
 section {
@@ -468,7 +523,8 @@ section {
   height: 100px;
 }
 
-#flex-direction-section .content-parent-container {
+#flex-direction-section .content-parent-container,
+.flex-column-parent-container {
   height: 150px;
 }
 
@@ -524,6 +580,14 @@ section {
   background: #c4d6f7;
 }
 
+.flex-row-parent-container .child-flex-shrink-box {
+  width: 200px;
+}
+
+.flex-column-parent-container .child-flex-shrink-box {
+  height: 75px;
+}
+
 .box-1 {
   font-size: 2rem;
   margin: 0;
@@ -568,7 +632,8 @@ section {
     height: 150px;
   }
 
-  #flex-direction-section .content-parent-container {
+  #flex-direction-section .content-parent-container,
+  .flex-column-parent-container {
     height: 200px;
   }
 
@@ -586,6 +651,14 @@ section {
 
   .child-direction-box {
     height: 50px;
+  }
+
+  .flex-row-parent-container .child-flex-shrink-box {
+    width: 400px;
+  }
+  
+  .flex-column-parent-container .child-flex-shrink-box {
+    height: 75px;
   }
 
   .box-1 {
@@ -617,7 +690,9 @@ section {
     height: 200px;
   }
 
-  #flex-direction-section .content-parent-container {
+  /* Can flex-column-parent-container be applied to first selector also? */
+  #flex-direction-section .content-parent-container,
+  .flex-column-parent-container {
     height: 300px;
   }
 
@@ -631,5 +706,13 @@ section {
 
   .child-direction-box {
     height: 75px;
+  }
+
+  .flex-row-parent-container .child-flex-shrink-box {
+    width: 800px;
+  }
+  
+  .flex-column-parent-container .child-flex-shrink-box {
+    height: 120px;
   }
 }
