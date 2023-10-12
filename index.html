@@ -18,7 +18,9 @@
       <h1>Big Bad Guide to the Flexbox Model Worksheet</h1>
     </div>
   </header>
-  <p style="color: red">Check color-blindness ✅, add legend for colors ✅, move global to top of css</p>
+  <p style="color: red">Check color-blindness ✅, add legend for colors ✅, move global to top of css, up button? <a
+      href="https://codepen.io/t_afif/pen/ExwbZKQ"></a><a
+      href="https://www.freecodecamp.org/news/css-only-back-to-top-button/"></a></p>
   <main>
     <section id="flex-box-rules" class="content-wrapper">
       <div class="section-content-wrapper">
@@ -74,7 +76,6 @@
             <li><a href="#align-content-section">align-content</a></li>
             <li><a href="#gap-section">gap</a></li>
             <li><a href="#flex-direction-section">flex-direction</a></li>
-            <li><a href="#flex-wrap-section">flex-wrap</a></li>
             <li><a href="#flex-flow-section">flex-flow</a></li>
           </ul>
         </nav>
@@ -93,14 +94,9 @@
         <h2>Flex Item Properties</h2>
         <nav>
           <ul>
-            <li><a href="#justify-content-section">justify-content</a></li>
-            <li><a href="#align-items-section">align-items</a></li>
-            <li><a href="#flex-wrap-section">flex-wrap</a></li>
-            <li><a href="#align-content-section">align-content</a></li>
-            <li><a href="#gap-section">gap</a></li>
-            <li><a href="#flex-direction-section">flex-direction</a></li>
-            <li><a href="#flex-wrap-section">flex-wrap</a></li>
-            <li><a href="#flex-flow-section">flex-flow</a></li>
+            <li><a href="#flex-content-section">flex, flex-basis, flex-shrink, flex-grow</a></li>
+            <li><a href="#order-section">order</a></li>
+            <li><a href="#align-self-section">align-self</a></li>
           </ul>
         </nav>
         <ul>
@@ -118,14 +114,15 @@
           <h3>justify-content:</h3>
           <p>Adding the <strong>justify-content</strong> property to the parent container positions child flex items
             along the
-            main axis.</p>
+            main axis. It also specifies how any space in the parent container, not taken up by the child items, is divided around
+            and between the items.</p>
           <p> When in the default
             row orientation, the child flex items will be horizontal, from left to right ➡︎.</p>
           <p>If the orientation is changed to column, the child flex
             items will be vertical, from top to bottom ⬇︎.</p>
           <p>The default position is <strong>flex-start</strong>.</p>
         </div>
-        <h4>center</h4>
+        <h4>justify-content: center;</h4>
         <p class="property-description">Positions elements in the center of the parent container. Any space within the
           container, not taken up by the
           content, will be evenly divided on the outside of the items without any spacing between the elements.</p>
@@ -134,7 +131,7 @@
           <div class="child-box"></div>
           <div class="child-box"></div>
         </div>
-        <h4>space-between</h4>
+        <h4>justify-content: space-between;</h4>
         <p class="property-description">The first and last item touch the edge of the parent container. Any space within
           the container, not taken up by
           the content will be divided evenly between the items.</p>
@@ -143,7 +140,7 @@
           <div class="child-box"></div>
           <div class="child-box"></div>
         </div>
-        <h4>space-around</h4>
+        <h4>justify-content: space-around;</h4>
         <p class="property-description">The items are positioned within the container with the extra space divided
           evenly
           around each item.
@@ -153,7 +150,7 @@
           <div class="child-box"></div>
           <div class="child-box"></div>
         </div>
-        <h4>space-evenly</h4>
+        <h4>justify-content: space-evenly;</h4>
         <p class="property-description">This value is very similar to space-around. The extra space is divided so that
           there is the same amount of
           space between the edge of the parent container and each item.</p>
@@ -162,7 +159,7 @@
           <div class="child-box"></div>
           <div class="child-box"></div>
         </div>
-        <h4>flex-start</h4>
+        <h4>justify-content: flex-start;</h4>
         <p class="property-description">Positions elements at the beginning of the container. If our main axis is
           horizontal, it will position it to
           the left. If it is vertical, it will position it at the top.</p>
@@ -171,7 +168,7 @@
           <div class="child-box"></div>
           <div class="child-box"></div>
         </div>
-        <h4>flex-end</h4>
+        <h4>justify-content: flex-end;</h4>
         <p class="property-description">Positions elements at the end of the container. If our main axis is horizontal,
           it
           will position it to the
@@ -199,7 +196,7 @@
         </div>
         <div class="two-column-layout">
           <div class="two-column-child">
-            <h4>center</h4>
+            <h4>align-items: center;</h4>
             <p>Positions elements in the center of the parent container along the cross axis. Any space within the
               container, not taken up by the
               content, will be evenly divided on the outside of the items without any spacing between the elements.
@@ -210,7 +207,7 @@
             </div>
           </div>
           <div class="two-column-child">
-            <h4>stretch</h4>
+            <h4>align-items: stretch;</h4>
             <p class="property-description">Items stretch to fill the parent container.</p>
             <div class="align-items-stretch-parent-container content-parent-container">
               <p class="child-text-box box-1">↑<br>↓</p>
@@ -218,7 +215,7 @@
             </div>
           </div>
           <div class="two-column-child">
-            <h4>baseline</h4>
+            <h4>align-items: baseline;</h4>
             <p class="property-description">Items are aligned at the content's baseline. This is helpful for aligning
               items
               of
@@ -233,7 +230,7 @@
             </div>
           </div>
           <div class="two-column-child">
-            <h4>flex-start</h4>
+            <h4>align-items: flex-start;</h4>
             <p class="property-description">Positions elements at the beginning of the container. If the cross axis is
               vertical, it will position it at the
               top. If it is horizontal, it will position it to the left.</p>
@@ -243,7 +240,7 @@
             </div>
           </div>
           <div class="two-column-child">
-            <h4>flex-end</h4>
+            <h4>align-items: flex-end;</h4>
             <p class="property-description">Positions elements at the end of the container. If the cross axis is
               vertical,
               it
@@ -268,7 +265,7 @@
         </div>
         <div class="three-column-layout">
           <div class="three-column-child">
-            <h4>nowrap</h4>
+            <h4>flex-wrap: nowrap;</h4>
             <p>The default value for flex-wrap. All of the items are in the same row on the
               main
               axis.</p>
@@ -294,7 +291,7 @@
             </div>
           </div>
           <div class="three-column-child">
-            <h4>wrap</h4>
+            <h4>flex-wrap: wrap;</h4>
             <p>Using the width of the items and the parent container, as each row fills, the
               next
               item wraps to the next row. The items are on the main axis and wrap from top to bottom.</p>
@@ -320,7 +317,7 @@
             </div>
           </div>
           <div class="three-column-child">
-            <h4>wrap-reverse</h4>
+            <h4>flex-wrap: wrap-reverse;</h4>
             <p>Using the width of the items and the parent container, as each row fills, the
               next
               item wraps to the next row. The items are on the main axis and wrap from bottom to top.</p>
@@ -363,7 +360,7 @@
         </div>
         <div class="three-column-layout">
           <div class="three-column-child">
-            <h4>center</h4>
+            <h4>align-content: center;</h4>
             <p></p>
             <div class="align-content-center-parent-container wrap-content-parent-container">
               <div class="child-wrap-box"></div>
@@ -375,7 +372,7 @@
             </div>
           </div>
           <div class="three-column-child">
-            <h4>space-between</h4>
+            <h4>align-content: space-between;</h4>
             <p></p>
             <div class="align-content-space-between-parent-container wrap-content-parent-container">
               <div class="child-wrap-box"></div>
@@ -387,7 +384,7 @@
             </div>
           </div>
           <div class="three-column-child">
-            <h4>space-around</h4>
+            <h4>align-content: space-around;</h4>
             <p></p>
             <div class="align-content-space-around-parent-container wrap-content-parent-container">
               <div class="child-wrap-box"></div>
@@ -399,7 +396,7 @@
             </div>
           </div>
           <div class="three-column-child">
-            <h4>space-evenly</h4>
+            <h4>align-content: space-evenly;</h4>
             <p></p>
             <div class="align-content-space-evenly-parent-container wrap-content-parent-container">
               <div class="child-wrap-box"></div>
@@ -411,7 +408,7 @@
             </div>
           </div>
           <div class="three-column-child">
-            <h4>stretch</h4>
+            <h4>align-content: stretch;</h4>
             <p>Items fill the cross axis. Items with a fixed height can overflow their parent container.</p>
             <div class="align-content-flex-start-parent-container wrap-content-parent-container">
               <div class="child-wrap-box"></div>
@@ -426,7 +423,7 @@
             </div>
           </div>
           <div class="three-column-child">
-            <h4>flex-start</h4>
+            <h4>align-content: flex-start;</h4>
             <p></p>
             <div class="align-content-flex-start-parent-container wrap-content-parent-container">
               <div class="child-wrap-box"></div>
@@ -438,7 +435,7 @@
             </div>
           </div>
           <div class="three-column-child">
-            <h4>flex-end</h4>
+            <h4>align-content: flex-end;</h4>
             <p></p>
             <div class="align-content-flex-end-parent-container wrap-content-parent-container">
               <div class="child-wrap-box"></div>
@@ -512,11 +509,16 @@
         <div class="description">
           <h3>flex-direction:</h3>
           <p>Adding the <strong>flex-direction</strong> property to the parent container specifies whether the main axis
-            is row (horizontal) or column (vertical).</p>
+            is row ➡︎ or column ⬇︎.</p>
+          <p>These examples show flex-direction changed from the default of row to column. The
+            <strong>justify-content</strong> property's main axis is vertical from top to bottom. And the
+            <strong>align-items</strong> property's cross axis is horizontal from left to right. All examples are
+            aligned to the center on the cross axis ➡︎ with <code>align-items: center;</code>.
+          </p>
         </div>
         <div class="three-column-layout">
           <div class="three-column-child">
-            <h4>center</h4>
+            <h4>flex-direction: column;<br>justify-content: center;</h4>
             <p class="property-description">Positions elements in the center of the parent container. Any space within
               the
               container, not taken up by the
@@ -528,7 +530,7 @@
             </div>
           </div>
           <div class="three-column-child">
-            <h4>space-between</h4>
+            <h4>flex-direction: column;<br>justify-content: space-between;</h4>
             <p class="property-description">The first and last item touch the edge of the parent container. Any space
               within
               the container, not taken up by
@@ -540,7 +542,7 @@
             </div>
           </div>
           <div class="three-column-child">
-            <h4>space-around</h4>
+            <h4>flex-direction: column;<br>justify-content: space-around;</h4>
             <p class="property-description">The items are positioned within the container with the extra space divided
               evenly
               around each item.
@@ -552,7 +554,7 @@
             </div>
           </div>
           <div class="three-column-child">
-            <h4>space-evenly</h4>
+            <h4>flex-direction: column;<br>justify-content: space-evenly;</h4>
             <p class="property-description">This value is very similar to space-around. The extra space is divided so
               that
               there is the same amount of
@@ -564,7 +566,7 @@
             </div>
           </div>
           <div class="three-column-child">
-            <h4>flex-start</h4>
+            <h4>flex-direction: column;<br>justify-content: flex-start;</h4>
             <p class="property-description">Positions elements at the beginning of the container. If our main axis is
               horizontal, it will position it to
               the left. If it is vertical, it will position it at the top.</p>
@@ -575,7 +577,7 @@
             </div>
           </div>
           <div class="three-column-child">
-            <h4>flex-end</h4>
+            <h4>flex-direction: column;<br>justify-content: flex-end;</h4>
             <p class="property-description">Positions elements at the end of the container. If our main axis is
               horizontal,
               it
@@ -601,10 +603,9 @@
         <div class="three-column-layout">
           <div class="three-column-child">
             <h4>flex-flow: row nowrap;</h4>
-            <p class="property-description">Positions elements in the center of the parent container. Any space within
-              the
-              container, not taken up by the
-              content, will be evenly divided on the outside of the items without any spacing between the elements.</p>
+            <p>The default layout when adding <code>display: flex;</code> to the parent container. All elements are on
+              the same row. And the size of each element is based on its content, not the width added to each child flex
+              item.</p>
             <div class="flex-flow-row-nowrap-parent-container content-parent-container">
               <div class="child-wrap-box">
                 <p>1</p>
@@ -628,10 +629,9 @@
           </div>
           <div class="three-column-child">
             <h4>flex-flow: row wrap;</h4>
-            <p class="property-description">The first and last item touch the edge of the parent container. Any space
-              within
-              the container, not taken up by
-              the content will be divided evenly between the items.</p>
+            <p>How many child flex items fit on a row is based on the width of the flex parent container and of the
+              child flex items. When the child flex items fill a row, the next child flex item wraps to the next row.
+              Each of the child flex items in the example has a width of 30%, so only 3 will fit on a single row.</p>
             <div class="flex-flow-row-wrap-parent-container content-parent-container">
               <div class="child-wrap-box">
                 <p>1</p>
@@ -655,9 +655,8 @@
           </div>
           <div class="three-column-child">
             <h4>flex-flow: row wrap-reverse;</h4>
-            <p class="property-description">The items are positioned within the container with the extra space divided
-              evenly
-              around each item.
+            <p>The wrapping is the same as <code>flex-flow: row wrap;</code> but the child flex items start in the lower
+              left corner. After filling a row, the next item starts on the row above.
             </p>
             <div class="flex-flow-row-wrap-reverse-parent-container content-parent-container">
               <div class="child-wrap-box">
@@ -682,10 +681,9 @@
           </div>
           <div class="three-column-child">
             <h4>flex-flow: column nowrap;</h4>
-            <p class="property-description">This value is very similar to space-around. The extra space is divided so
-              that
-              there is the same amount of
-              space between the edge of the parent container and each item.</p>
+            <p>Child flex items form a column at the default, flex-start. The height of the container grows to fit the
+              child flex items. If the container has a fixed height, the child flex items will break through the
+              container.</p>
             <div class="flex-flow-column-nowrap-parent-container content-parent-container">
               <div class="child-wrap-box">
                 <p>1</p>
@@ -703,9 +701,9 @@
           </div>
           <div class="three-column-child">
             <h4>flex-flow: column wrap;</h4>
-            <p class="property-description">Positions elements at the beginning of the container. If our main axis is
-              horizontal, it will position it to
-              the left. If it is vertical, it will position it at the top.</p>
+            <p>The child flex items line up in columns. How many child flex items fit on a row is based on the height of
+              the flex parent container and of the child flex items. When the child flex items fill a column, the next
+              child flex item wraps to the next column.</p>
             <div class="flex-flow-column-wrap-parent-container flex-flow-content-parent-container">
               <div class="child-wrap-box">
                 <p>1</p>
@@ -729,11 +727,9 @@
           </div>
           <div class="three-column-child">
             <h4>flex-flow: column wrap-reverse;</h4>
-            <p class="property-description">Positions elements at the end of the container. If our main axis is
-              horizontal,
-              it
-              will position it to the
-              right. If our main axis is vertical, it will position it at the bottom.</p>
+            <p>The wrapping is the same as <code>flex-flow: column wrap;</code> but the child flex items start in the
+              upper
+              right corner. After filling a column, the next item starts on the column to the left.</p>
             <div class="flex-flow-column-wrap-reverse-parent-container flex-flow-content-parent-container">
               <div class="child-wrap-box">
                 <p>1</p>
@@ -791,7 +787,8 @@
         <p class="property-description">The <strong>flex-basis</strong> property sets a width to a flex child item.
           <strong>flex-basis</strong> is very similar to the width property. If a flex child item has a width set to it
           with <strong>flex-basis</strong>, as long as the container has that width available, the child flex element
-          will be that width. <strong>flex-basis</strong> also overwrites the width property.</p>
+          will be that width. <strong>flex-basis</strong> also overwrites the width property.
+        </p>
         <div class="flex-row-parent-container content-parent-container">
           <div class="child-box"></div>
           <div class="child-box child-flex-basis-box">
@@ -879,8 +876,8 @@
       <div class="section-content-wrapper">
         <div class="description">
           <h3>order:</h3>
-          <p>Adding the <strong>order</strong> property to child flex item allows you to specify what order the content
-            is in.</p>
+          <p>Adding the <strong>order</strong> property to child flex item allows you to specify what order of the
+            content.</p>
           <p>The default value is <strong>0</strong>.</p>
         </div>
         <div class="two-column-layout">
@@ -934,26 +931,27 @@
           </div>
           <div class="two-column-child">
             <h4>after</h4>
-            <p class="property-description">Using the Flexbox align-self property the boxes are positioned individually.
+            <p>Using the Flexbox align-self property the boxes are positioned individually.
             </p>
             <p><strong>auto</strong> keeps the same align-items or align-content position.</p>
             <div class="align-self-parent-container content-parent-container">
-              <p class="child-align-self-box align-self-child-flex-item-1"><strong>auto</strong><br>Tart croissant
+              <p class="child-align-self-box align-self-child-flex-item-1"><strong>align-self: auto;</strong><br>Tart croissant
                 tootsie roll.</p>
-              <p class="child-align-self-box align-self-child-flex-item-2"><strong>flex-start</strong><br>Tart croissant
+              <p class="child-align-self-box align-self-child-flex-item-2"><strong>align-self: flex-start;</strong><br>Tart croissant
                 tootsie roll danish sweet roll halvah.</p>
-              <p class="child-align-self-box align-self-child-flex-item-3"><strong>flex-end</strong><br>Tart croissant
+              <p class="child-align-self-box align-self-child-flex-item-3"><strong>align-self: flex-end;</strong><br>Tart croissant
                 tootsie roll danish sweet roll halvah. Gingerbread chocolate bar.</p>
             </div>
           </div>
           <div class="two-column-child">
             <h4>after</h4>
+            <p>Using the Flexbox align-self property the boxes are positioned individually.</p>
             <div class="align-self-parent-container content-parent-container">
-              <p class="child-align-self-box align-self-child-flex-item-4"><strong>center</strong><br>Tart croissant
+              <p class="child-align-self-box align-self-child-flex-item-4"><strong>align-self: center;</strong><br>Tart croissant
                 tootsie roll.</p>
-              <p class="child-align-self-box align-self-child-flex-item-5"><strong>baseline</strong><br>Tart croissant
+              <p class="child-align-self-box align-self-child-flex-item-5"><strong>align-self: baseline;</strong><br>Tart croissant
                 tootsie roll danish sweet roll halvah.</p>
-              <p class="child-align-self-box align-self-child-flex-item-6"><strong>stetch</strong><br>Tart croissant
+              <p class="child-align-self-box align-self-child-flex-item-6"><strong>align-self: stetch;</strong><br>Tart croissant
                 tootsie roll danish sweet roll halvah. Gingerbread chocolate bar.</p>
             </div>
           </div>
@@ -963,7 +961,17 @@
     <!-- end align-self section -->
   </main>
   <footer>
-    <!-- Maybe add menu here too? -->
+    <div id="resources" class="content-wrapper">
+      <div class="section-content-wrapper">
+        <h2>Resources</h2>
+        <p>Want to learn more about Flexbox? Here are some fantastic resources</p>
+        <ul>
+          <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox by
+              CSS-Tricks</a></li>
+          <li><a href=""></a></li>
+        </ul>
+      </div>
+    </div>
   </footer>
 </body>
 
