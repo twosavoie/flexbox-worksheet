@@ -643,8 +643,7 @@ section#flex-content-section {
 }
 
 .child-flex-basis-box {
-  flex-basis: 800px;
-  /* Can these be in a utility class? */
+  flex-basis: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
