@@ -1,4 +1,354 @@
-/* starter */
+/* Worksheet styles */
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 50px 0;
+}
+
+#logo {
+  width: 10%;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: #f16059;
+  font-size: 1.5rem;
+  padding-bottom: 30px;
+  border-bottom: 1px solid silver;
+  margin: 30px 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1.17rem;
+  margin: 20px 0 10px 0;
+}
+
+h2,
+h3,
+h4,
+nav ul li a,
+p,
+ul,
+code {
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  line-height: 1.5;
+}
+
+code {
+  background-color: #EEECEC;
+  padding: 0 3px;
+  color: #1717b0;
+}
+
+.special-notes {
+  color: #f16059;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+header nav p {
+  text-align: left;
+}
+
+.header-content-wrapper {
+  width: 80%;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Creates boxes in legend */
+.parent-color {
+  color: #ede4f6;
+  background-color: #ede4f6;
+  border: 2px solid #d3b6f2;
+  padding: 0 20px;
+}
+
+.content-color {
+  color: #c4d6f7;
+  background-color: #c4d6f7;
+  border: 2px solid #aeaeef;
+  padding: 0 28px;
+}
+
+/* End reates boxes in legend */
+
+section {
+  margin-bottom: 100px;
+}
+
+.section-content-wrapper {
+  width: 90%;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* The parent flex container for most of the child boxes */
+.content-parent-container {
+  background-color: #ede4f6;
+  padding: 2px 0;
+  padding: 2px;
+}
+
+/* Parent flex containers for specific Flexbox properties */
+
+.wrap-content-parent-container {
+  background-color: #ede4f6;
+  padding: 2px 0;
+  padding: 2px;
+  height: 100px;
+}
+
+#flex-direction-section .content-parent-container,
+.flex-column-parent-container {
+  height: 150px;
+}
+
+.flex-flow-content-parent-container {
+  background-color: #ede4f6;
+  padding: 2px 0;
+  padding: 2px;
+  height: 100px;
+}
+
+.align-self-parent-container {
+  height: 250px;
+  align-items: center;
+}
+
+.align-self-parent-container p {
+  margin: 0;
+}
+
+/* End parent flex containers for specific Flexbox properties */
+
+/* Child flex item styles */
+
+.child-box {
+  height: 25px;
+  width: 25%;
+  outline: 2px solid #aeaeef;
+  background: #c4d6f7;
+}
+
+.child-text-box {
+  padding: 10px;
+  outline: 2px solid #aeaeef;
+  background: #c4d6f7;
+}
+
+.child-wrap-box {
+  height: 25px;
+  width: 30%;
+  outline: 2px solid #aeaeef;
+  background: #c4d6f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.child-direction-box {
+  height: 25px;
+  width: 75%;
+  outline: 2px solid #aeaeef;
+  background: #c4d6f7;
+}
+
+.child-align-self-box {
+  width: 30%;
+  outline: 2px solid #aeaeef;
+  background: #c4d6f7;
+}
+
+.flex-row-parent-container .child-flex-shrink-box {
+  width: 200px;
+}
+
+.flex-column-parent-container .child-flex-shrink-box {
+  height: 75px;
+}
+
+.box-1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.box-2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* End child flex item styles */
+
+@media (min-width: 768px) {
+
+  .property-description {
+    width: 80%;
+  }
+
+  .two-column-layout {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+
+  .two-column-child {
+    width: 47%;
+  }
+
+  .three-column-layout {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+
+  .three-column-child {
+    width: 30%;
+  }
+
+  /* Parent flex containers for specific Flexbox properties */
+
+  .wrap-content-parent-container {
+    height: 150px;
+  }
+
+  #flex-direction-section .content-parent-container,
+  .flex-column-parent-container {
+    height: 200px;
+  }
+
+  .flex-flow-content-parent-container {
+    height: 200px;
+  }
+
+  /* End parent flex containers for specific Flexbox properties */
+
+  /* Child flex item styles */
+
+  .child-box {
+    height: 50px;
+  }
+
+  .child-wrap-box {
+    height: 50px;
+  }
+
+  .child-direction-box {
+    height: 50px;
+  }
+
+  .flex-row-parent-container .child-flex-shrink-box {
+    width: 400px;
+  }
+
+  .flex-column-parent-container .child-flex-shrink-box {
+    height: 75px;
+  }
+
+  .box-1 {
+    margin: 0;
+  }
+
+  .box-2 {
+    width: 60%;
+    margin: 0;
+  }
+
+  /* End child flex item styles */
+
+}
+
+@media (min-width: 1200px) {
+  body {
+    margin: 100px 0;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    padding-bottom: 50px;
+  }
+
+  .description {
+    width: 60%;
+  }
+
+  .property-description {
+    width: 70%;
+  }
+
+  /* Parent flex containers for specific Flexbox properties */
+
+  .wrap-content-parent-container {
+    height: 200px;
+  }
+
+  #flex-direction-section .content-parent-container,
+  .flex-column-parent-container {
+    height: 300px;
+  }
+
+  /* End parent flex containers for specific Flexbox properties */
+
+  /* Child flex item styles */
+
+  .child-box {
+    height: 75px;
+  }
+
+  .child-wrap-box {
+    height: 75px;
+  }
+
+  .child-direction-box {
+    height: 75px;
+  }
+
+  .flex-row-parent-container .child-flex-shrink-box {
+    width: 800px;
+  }
+
+  .flex-column-parent-container .child-flex-shrink-box {
+    height: 120px;
+  }
+
+  /* End child flex item styles */
+}
+
+/* START COMPLETING THE WORKSHEET HERE */
+/* There are no media queries to add code to. The worksheet's reponsive design is created above. */
 
 /* justify-content */
 section#justify-content-section {
@@ -302,9 +652,6 @@ section#flex-content-section {
 
 .child-flex-shrink-box {
   flex-shrink: 0;
-  /* Need a new class so flex-basis isn't needed. It messes up the column. */
-  /* flex-basis: 800px; */
-  /* Can these be in a utility class? */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -312,7 +659,6 @@ section#flex-content-section {
 
 .child-flex-grow-box {
   flex-grow: 1;
-  /* Can these be in a utility class? */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -395,328 +741,3 @@ section#align-self-section {
 }
 
 /* end order */
-
-
-
-/* Worksheet styles */
-/* Global styles */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 50px 0;
-}
-
-#logo {
-  width: 10%;
-}
-
-h1 {
-  font-family: 'Montserrat', sans-serif;
-  color: #f16059;
-  font-size: 1.5rem;
-  padding-bottom: 30px;
-  border-bottom: 1px solid silver;
-  margin: 30px 0;
-}
-
-h2 {
-  font-size: 1.5rem;
-}
-
-h3 {
-  font-size: 1.25rem;
-}
-
-h4 {
-  font-size: 1.17rem;
-  margin: 20px 0 10px 0;
-}
-
-h2,
-h3,
-h4,
-nav ul li a,
-p,
-ul,
-code {
-  font-family: 'Montserrat', sans-serif;
-  color: black;
-}
-
-a {
-  color: inherit;
-}
-
-ul {
-  line-height: 1.5;
-}
-
-code {
-  background-color: #EEECEC;
-  padding: 0 3px;
-  color: #1717b0;
-}
-
-.special-notes {
-  color: #f16059;
-}
-
-header {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-header nav p {
-  text-align: left;
-}
-
-.header-content-wrapper {
-  width: 80%;
-  /* ??? margin-bottom: 50px; */
-}
-
-nav ul {
-  display: flex;
-  flex-flow: row wrap;
-  gap: 10px;
-  list-style: none;
-  padding-left: 0;
-}
-
-.parent-color {
-  color: #ede4f6;
-  background-color: #ede4f6;
-  border: 2px solid #d3b6f2;
-  padding: 0 20px;
-}
-
-.content-color {
-  color: #c4d6f7;
-  background-color: #c4d6f7;
-  border: 2px solid #aeaeef;
-  padding: 0 28px;
-}
-
-section {
-  margin-bottom: 100px;
-}
-
-.section-content-wrapper {
-  width: 90%;
-}
-
-.content-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-
-.content-parent-container {
-  background-color: #ede4f6;
-  padding: 2px 0;
-  padding: 2px;
-}
-
-.wrap-content-parent-container {
-  background-color: #ede4f6;
-  padding: 2px 0;
-  padding: 2px;
-  height: 100px;
-}
-
-#flex-direction-section .content-parent-container,
-.flex-column-parent-container {
-  height: 150px;
-}
-
-.flex-flow-content-parent-container {
-  background-color: #ede4f6;
-  padding: 2px 0;
-  padding: 2px;
-  height: 100px;
-}
-
-.align-self-parent-container {
-  height: 250px;
-  align-items: center;
-}
-
-.align-self-parent-container p {
-  margin: 0;
-}
-
-.child-box {
-  height: 25px;
-  width: 25%;
-  outline: 2px solid #aeaeef;
-  background: #c4d6f7;
-}
-
-.child-text-box {
-  padding: 10px;
-  outline: 2px solid #aeaeef;
-  background: #c4d6f7;
-}
-
-.child-wrap-box {
-  height: 25px;
-  width: 30%;
-  outline: 2px solid #aeaeef;
-  background: #c4d6f7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.child-direction-box {
-  height: 25px;
-  width: 75%;
-  outline: 2px solid #aeaeef;
-  background: #c4d6f7;
-}
-
-.child-align-self-box {
-  width: 30%;
-  outline: 2px solid #aeaeef;
-  background: #c4d6f7;
-}
-
-.flex-row-parent-container .child-flex-shrink-box {
-  width: 200px;
-}
-
-.flex-column-parent-container .child-flex-shrink-box {
-  height: 75px;
-}
-
-.box-1 {
-  font-size: 2rem;
-  margin: 0;
-}
-
-.box-2 {
-  font-size: 1rem;
-  margin: 0;
-}
-
-@media (min-width: 768px) {
-
-  .property-description {
-    width: 80%;
-  }
-
-  .two-column-layout {
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
-  }
-
-  .two-column-child {
-    width: 47%;
-  }
-
-  .three-column-layout {
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
-  }
-
-  .three-column-child {
-    width: 30%;
-  }
-
-  .wrap-content-parent-container {
-    height: 150px;
-  }
-
-  #flex-direction-section .content-parent-container,
-  .flex-column-parent-container {
-    height: 200px;
-  }
-
-  .flex-flow-content-parent-container {
-    height: 200px;
-  }
-
-  .child-box {
-    height: 50px;
-  }
-
-  .child-wrap-box {
-    height: 50px;
-  }
-
-  .child-direction-box {
-    height: 50px;
-  }
-
-  .flex-row-parent-container .child-flex-shrink-box {
-    width: 400px;
-  }
-
-  .flex-column-parent-container .child-flex-shrink-box {
-    height: 75px;
-  }
-
-  .box-1 {
-    margin: 0;
-  }
-
-  .box-2 {
-    width: 60%;
-    margin: 0;
-  }
-
-}
-
-@media (min-width: 1200px) {
-  body {
-    margin: 100px 0;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-    padding-bottom: 50px;
-  }
-
-  .description {
-    width: 60%;
-  }
-
-  .property-description {
-    width: 70%;
-  }
-
-  .wrap-content-parent-container {
-    height: 200px;
-  }
-
-  /* Can flex-column-parent-container be applied to first selector also? */
-  #flex-direction-section .content-parent-container,
-  .flex-column-parent-container {
-    height: 300px;
-  }
-
-  .child-box {
-    height: 75px;
-  }
-
-  .child-wrap-box {
-    height: 75px;
-  }
-
-  .child-direction-box {
-    height: 75px;
-  }
-
-  .flex-row-parent-container .child-flex-shrink-box {
-    width: 800px;
-  }
-
-  .flex-column-parent-container .child-flex-shrink-box {
-    height: 120px;
-  }
-}
