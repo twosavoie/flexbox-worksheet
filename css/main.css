@@ -312,10 +312,10 @@ section#flex-content-section {
 
 .child-flex-grow-box {
   flex-grow: 1;
-    /* Can these be in a utility class? */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  /* Can these be in a utility class? */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex-column-parent-container {
@@ -405,7 +405,11 @@ section#align-self-section {
 }
 
 body {
-  margin: 50px 0 50px 0;
+  margin: 50px 0;
+}
+
+#logo {
+  width: 10%;
 }
 
 h1 {
@@ -414,7 +418,7 @@ h1 {
   font-size: 1.5rem;
   padding-bottom: 30px;
   border-bottom: 1px solid silver;
-  margin-bottom: 30px;
+  margin: 30px 0;
 }
 
 h2 {
@@ -471,7 +475,7 @@ header nav p {
 
 .header-content-wrapper {
   width: 80%;
-  margin-bottom: 50px;
+  /* ??? margin-bottom: 50px; */
 }
 
 nav ul {
@@ -600,10 +604,6 @@ section {
 
 @media (min-width: 768px) {
 
-  h1 {
-    margin-bottom: 50px;
-  }
-
   .property-description {
     width: 80%;
   }
@@ -656,7 +656,7 @@ section {
   .flex-row-parent-container .child-flex-shrink-box {
     width: 400px;
   }
-  
+
   .flex-column-parent-container .child-flex-shrink-box {
     height: 75px;
   }
@@ -673,6 +673,10 @@ section {
 }
 
 @media (min-width: 1200px) {
+  body {
+    margin: 100px 0;
+  }
+
   h1 {
     font-size: 2.5rem;
     padding-bottom: 50px;
@@ -711,7 +715,7 @@ section {
   .flex-row-parent-container .child-flex-shrink-box {
     width: 800px;
   }
-  
+
   .flex-column-parent-container .child-flex-shrink-box {
     height: 120px;
   }
