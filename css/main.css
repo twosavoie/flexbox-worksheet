@@ -715,27 +715,27 @@ section#align-self-section {
   justify-content: space-around;
 }
 
-.align-self-child-flex-item-1 {
+.align-self-auto-child-flex-item {
   align-self: auto;
 }
 
-.align-self-child-flex-item-2 {
+.align-self-flex-start-child-flex-item {
   align-self: flex-start;
 }
 
-.align-self-child-flex-item-3 {
+.align-self-flex-end-child-flex-item {
   align-self: flex-end;
 }
 
-.align-self-child-flex-item-4 {
+.align-self-center-child-flex-item {
   align-self: center;
 }
 
-.align-self-child-flex-item-5 {
+.align-self-baseline-child-flex-item {
   align-self: baseline;
 }
 
-.align-self-child-flex-item-6 {
+.align-self-stretch-child-flex-item {
   align-self: stretch;
 }
 
