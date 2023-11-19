@@ -113,7 +113,8 @@
           <h3>justify-content:</h3>
           <p>Adding the <strong>justify-content</strong> property to the parent container positions child flex items
             along the
-            main axis. It also specifies how any space in the parent container, not taken up by the child items, is divided around
+            main axis. It also specifies how any space in the parent container, not taken up by the child items, is
+            divided around
             and between the items.</p>
           <p> When in the default
             row orientation, the child flex items will be horizontal, from left to right ➡︎.</p>
@@ -797,12 +798,19 @@
         </div>
         <h4>flex-shrink</h4>
         <p class="property-description">The <strong>flex-shrink</strong> property controls how a flex child item shrinks
-          when the browser window becomes more narrow. If the <strong>flex-shrink</strong> property's value is 0, the
-          flex child item will not shrink at all. If the <strong>flex-shrink</strong> is set to 2, and the other flex
+          when the browser window becomes more narrow. If the <strong>flex-shrink</strong> is set to 2, and the other flex
           child items have a flex-shrink value of 1, the flex child item will shrink twice as much.
         </p>
-        <p>The width of the second box is mobile - 200px, tablet - 400px, and desktop - 800px.</p>
-        <!-- Maybe add an additional block for this -->
+
+        <div class="flex-row-parent-container content-parent-container">
+          <div class="child-box"></div>
+          <div class="child-box child-flex-shrink-box">
+            <p>flex-shrink: 0;</p>
+          </div>
+          <div class="child-box"></div>
+        </div>
+        <p class="property-description">If the <strong>flex-shrink</strong> property's value is 0, the
+          flex child item will not shrink at all. The width of the second box is mobile - 200px, tablet - 400px, and desktop - 800px.</p>
         <div class="flex-row-parent-container content-parent-container">
           <div class="child-box"></div>
           <div class="child-box child-flex-shrink-box">
@@ -934,11 +942,14 @@
             </p>
             <p><strong>auto</strong> keeps the same align-items or align-content position.</p>
             <div class="align-self-parent-container content-parent-container">
-              <p class="child-align-self-box align-self-child-flex-item-1"><strong>align-self: auto;</strong><br>Tart croissant
+              <p class="child-align-self-box align-self-child-flex-item-1"><strong>align-self: auto;</strong><br>Tart
+                croissant
                 tootsie roll.</p>
-              <p class="child-align-self-box align-self-child-flex-item-2"><strong>align-self: flex-start;</strong><br>Tart croissant
+              <p class="child-align-self-box align-self-child-flex-item-2"><strong>align-self:
+                  flex-start;</strong><br>Tart croissant
                 tootsie roll danish sweet roll halvah.</p>
-              <p class="child-align-self-box align-self-child-flex-item-3"><strong>align-self: flex-end;</strong><br>Tart croissant
+              <p class="child-align-self-box align-self-child-flex-item-3"><strong>align-self:
+                  flex-end;</strong><br>Tart croissant
                 tootsie roll danish sweet roll halvah. Gingerbread chocolate bar.</p>
             </div>
           </div>
@@ -946,11 +957,14 @@
             <h4>after</h4>
             <p>Using the Flexbox align-self property the boxes are positioned individually.</p>
             <div class="align-self-parent-container content-parent-container">
-              <p class="child-align-self-box align-self-child-flex-item-4"><strong>align-self: center;</strong><br>Tart croissant
+              <p class="child-align-self-box align-self-child-flex-item-4"><strong>align-self: center;</strong><br>Tart
+                croissant
                 tootsie roll.</p>
-              <p class="child-align-self-box align-self-child-flex-item-5"><strong>align-self: baseline;</strong><br>Tart croissant
+              <p class="child-align-self-box align-self-child-flex-item-5"><strong>align-self:
+                  baseline;</strong><br>Tart croissant
                 tootsie roll danish sweet roll halvah.</p>
-              <p class="child-align-self-box align-self-child-flex-item-6"><strong>align-self: stetch;</strong><br>Tart croissant
+              <p class="child-align-self-box align-self-child-flex-item-6"><strong>align-self: stetch;</strong><br>Tart
+                croissant
                 tootsie roll danish sweet roll halvah. Gingerbread chocolate bar.</p>
             </div>
           </div>
