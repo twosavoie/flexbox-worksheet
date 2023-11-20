@@ -152,15 +152,15 @@
           <h3>justify-content:</h3>
           <p>Adding the <strong>justify-content</strong> property to the parent container positions child flex items
             along the
-            main axis. It also specifies how any space in the parent container, not taken up by the child items, is
-            divided around
-            and between the items. This means that if the main axis is horizontal, our content will be laid out in a row
-            ➡︎ and we rarely need to add margin and padding on the left and right of our content. </p>
-          <p> When in the default
-            row orientation, the child flex items will be horizontal, from left to right ➡︎.</p>
-          <p>If the orientation is changed to column, the child flex
+            main axis. This means that if the main axis is horizontal, our content will be laid out in a row
+            ➡︎ from left to right. If the orientation is changed to column, the child flex
             items will be vertical, from top to bottom ⬇︎.</p>
-          <p>The default value is <strong>flex-start</strong>.</p>
+          <p>The <strong>justify-content</strong> property also specifies how any extra space in the parent container is
+            divided around
+            and between the items. </p>
+          <p>When using the <strong>justify-content</strong> property in row orientation, we rarely need to add margin
+            and padding on the left and right of our content. </p>
+          <p>The default value for <strong>justify-content</strong> is <strong>flex-start</strong>.</p>
         </div>
         <h4>justify-content: center;</h4>
         <p class="property-description">Positions elements in the center of the parent container. Any space within the
@@ -228,11 +228,11 @@
         <div class="description">
           <h3>align-items:</h3>
           <p>Adding the <strong>align-items</strong> property to the parent container positions child items along the
-            cross axis.</p>
-          <p> When in the default
-            row orientation, the cross axis will be vertical, from top to bottom ⬇︎.</p>
-          <p>If the orientation is changed to column, the cross axis will be horizontal, from left to right ➡︎.</p>
-          <p>The default value is <strong>stretch</strong>.</p>
+            cross axis. If the main axis is horizontal, the cross axis is vertical from top to bottom ⬇︎. And if the
+            main axis is vertical, the cross axis is horizontal from left to right ➡︎. The <strong>align-items</strong>
+            property acts exactly like justify-content, except that it aligns your elements along the cross axis. Pretty
+            sweet!</p>
+          <p>The default value of <strong>align-items</strong> is <strong>stretch</strong>.</p>
         </div>
         <div class="two-column-layout">
           <div class="two-column-child">
@@ -301,7 +301,12 @@
       <div class="section-content-wrapper">
         <div class="description">
           <h3>flex-wrap:</h3>
-          <p>The <strong>flex-wrap</strong> property works with width or flex-basis to create a grid layout.</p>
+          <p>The <strong>flex-wrap</strong> property gives us the ability to create a grid layout. By default, adding
+            <strong>display: flex;</strong> to the parent container moves all of the child items to a single row along
+            the main axis. The <strong>flex-wrap</strong> property dictates whether the items should wrap to the next
+            row or not. We use the <strong>flex-wrap</strong> property along with the width property so that, as each
+            row fills, the next item wraps to the next row.
+          </p>
         </div>
         <div class="three-column-layout">
           <div class="three-column-child">
@@ -393,10 +398,15 @@
         <div class="description">
           <h3>align-content:</h3>
           <p>Adding the <strong>align-content</strong> property to the parent container positions child items along the
-            cross axis.</p>
+            cross axis. The <strong>align-content</strong> property has the same values as justify-content, but is used
+            with the
+            flex-wrap property when multiple child items are on more than one row or column within the same parent Flex
+            container. If you do not have wrapped content (i.e., more than one row), <strong>align-content</strong> will
+            have no effect.
+          </p>
           <p> When in the default
-            row orientation, the cross axis will be vertical, from top to bottom ⬇︎.</p>
-          <p>If the orientation is changed to column, the cross axis will be horizontal, from left to right ➡︎.</p>
+            row orientation, the cross axis will be vertical, from top to bottom ⬇︎. If the orientation is changed to
+            column, the cross axis will be horizontal, from left to right ➡︎.</p>
         </div>
         <div class="three-column-layout">
           <div class="three-column-child">
@@ -499,10 +509,16 @@
       <div class="section-content-wrapper">
         <div class="description">
           <h3>gap:</h3>
-          <p>Adding the <strong>gap</strong> creates space between elements.</p>
-          <p>When used with another property, like <code>justify-content: space-between;</code>, it becomes a minimum
-            amount of
-            space.</p>
+          <p>It's great that we have Flexbox properties like justify-content, align-items, and align-content to lay out
+            our sites. These properties both position the content <em>and</em> say where the extra space in the
+            container goes. There's another set of Flexbox properties that can be used to add spacing between elements
+            in both the main and cross axis - the <strong>gap</strong>, <strong>row-gap</strong>, and
+            <strong>column-gap</strong> properties. (Similar to adding margin between flex items.)
+          </p>
+          <p>If <strong>gap</strong> is used along with a Flexbox property like
+            <code>justify-content: space-between;</code>, the gap
+            will be the minimum space between the flex items.
+          </p>
         </div>
         <div class="three-column-layout">
           <div class="three-column-child">
@@ -552,10 +568,15 @@
         <div class="description">
           <h3>flex-direction:</h3>
           <p>Adding the <strong>flex-direction</strong> property to the parent container specifies whether the main axis
-            is row ➡︎ or column ⬇︎.</p>
-          <p>These examples show flex-direction changed from the default of row to column. The
-            <strong>justify-content</strong> property's main axis is vertical from top to bottom. And the
-            <strong>align-items</strong> property's cross axis is horizontal from left to right. All examples are
+            is row ➡︎ or column ⬇︎. When you add <code>display: flex;</code> to the parent container, the flex child
+            items will move to the default row orientation along the main axis. </p>
+          <p>These examples show <strong>flex-direction</strong> changed from the default of row to column. The
+            <strong>justify-content</strong> property is aligning content along the main axis which is vertical from top
+            to bottom. And the
+            <strong>align-items</strong> property is aligning content along the cross axis which is horizontal from left
+            to right.
+          </p>
+          <p>All examples are
             aligned to the center on the cross axis ➡︎ with <code>align-items: center;</code>.
           </p>
         </div>
@@ -639,7 +660,14 @@
       <div class="section-content-wrapper">
         <div class="description">
           <h3>flex-flow:</h3>
-          <p>The <strong>flex-flow</strong> property combines the flex-wrap and flex-direction properties.</p>
+          <p>The <strong>flex-flow</strong> property combines the <strong>flex-direction</strong> and the
+            <strong>flex-wrap</strong> properties. The <strong>flex-flow</strong> property is a shorthand property that
+            combines both into one handy line of CSS. The first value is the flex-direction and the second is the
+            flex-wrap value.
+          </p>
+          <p>Notice there isn't a hyphen between the values for <strong>flex-direction</strong> and
+            <strong>flex-wrap</strong>.
+          </p>
         </div>
         <div class="three-column-layout">
           <div class="three-column-child">
@@ -807,30 +835,36 @@
       <div class="section-content-wrapper">
         <div class="description">
           <h3>flex:</h3>
-          <p>The <strong>flex</strong> property is three properties in one. It include <strong>flex-grow</strong>,
-            <strong>flex-shrink</strong>, and <strong>flex-basis</strong>.
+          <p>The <strong>flex</strong> property is three properties in one. It is a shorthand property that includes
+            <strong>flex-grow</strong>,
+            <strong>flex-shrink</strong>, and <strong>flex-basis</strong>. It's applied to child flex items along the
+            main axis.
           </p>
-          <p>The <strong>flex</strong> property is applied to elements along the main axis. The default values are
-            <code>flex: 0 1 auto;</code> with <strong>flex-grow</strong> first with a value of 0,
-            <strong>flex-shrink</strong> second with a value of 1, and <strong>flex-basis</strong> third with a value of
-            auto.
+          <p>The <strong>flex</strong> property dictates the length of the element, relative to the rest of the elements
+            inside the container. When you add <code>display: flex;</code> to the parent container, the default flex
+            values are <code>flex: 0 1 auto;</code>.</p>
+          <ul>
+            <li>The first value is the <strong>flex-grow</strong> property with a default value of <code>0</code>.</li>
+            <li>The second value is the
+              <strong>flex-shrink</strong> property with a default value of <code>1</code>.
+            </li>
+            <li>The third value is the <strong>flex-basis</strong> property with a default value of <code>auto</code>.
+            </li>
+          </ul>
+          <p>Changing the value of any of these properties determines the size of a child flex item as the size of the
+            window grows and shrinks. If you don't change
+            the flex property values, you don't need to add <strong>flex</strong> to your CSS.
           </p>
-          <p>When <code>display: flex;</code> is added to a parent container, the content's size and the rate it shrinks
-            or grows when the browser window changes size is set.</p>
-          <p></p>
-          <p>To see how <code>flex</code> works, resize the browser window.</p>
         </div>
         <h4>default</h4>
-        <p class="property-description">The default flex values of <code>flex: 0 1 auto;</code> mean that the
-          <strong>flex-grow</strong> property has a value of 0, the <strong>flex-shrink</strong> property has a value of
-          1, and the <strong>flex-basis</strong> property as a value of auto.
-        </p>
-        <p>This means that the content is the size its set to in CSS (the <strong>flex-basis</strong>.) Each child flex
+        <p class="property-description">The default flex values of <code>flex: 0 1 auto;</code> mean that the content is
+          the size its set to in CSS (the <strong>flex-basis</strong>.) Each child flex
           item will shrink at the same rate (<strong>flex-shrink</strong>.) And the child flex items will not grow
           beyond
           the width they've been set to (<strong>flex-grow</strong>.)</p>
-        <p>In this example, the <strong>"content-wrapper</strong> is 90% of the width of the browser window to a
-          max-width of 1200px. Let's look at the desktop version to make the math a bit easier.</p>
+        <p>To see how <code>flex</code> works, resize the browser window.</p>
+        <!-- <p>In this example, the <strong>"content-wrapper</strong> is 90% of the width of the browser window to a
+          max-width of 1200px. Let's look at the desktop version to make the math a bit easier.</p> -->
         <div class="flex-row-parent-container content-parent-container">
           <div class="child-box"></div>
           <div class="child-box"></div>
@@ -838,14 +872,17 @@
         </div>
         <h4>flex-basis</h4>
         <p class="property-description">The <strong>flex-basis</strong> property sets the optimum width to a flex child
-          item. As long as there is enough space, the child flex item will be the width set with
-          <strong>flex-basis</strong> while the other child items with the default flex-basis of <code>auto</code> will
-          shrink based on their flex-shrink value.
-          It is very similar to the width property although <strong>flex-basis</strong> can overwrite the width
+          item. The default value of <code>auto</code> means that the flex child items are the size of their content.
+          Changing the <strong>flex-basis</strong> property's value sets the width of the child item (in row
+          orientation.) And as long as there is enough space, the child flex item will be that width. The other child
+          items withing the parent container with the default flex-basis of <code>auto</code> will
+          shrink based on their flex-shrink value.</p>
+        <p>The <strong>flex-basis</strong> property is very similar to the width property, although
+          <strong>flex-basis</strong> can overwrite the width
           property.
         </p>
         <p>If the parent flex container is too small to fit the width set with flex-basis, it will shrink based on its
-          <strong>flex-shrink</strong> value.
+          <strong>flex-shrink</strong> value. Try reducing the width of the browser window. The center child flex item continues to be 600px until the parent flex container is too small to maintain this width.
         </p>
         <div class="flex-row-parent-container content-parent-container">
           <div class="child-box"></div>
@@ -856,26 +893,34 @@
         </div>
         <h4>flex-shrink</h4>
         <p class="property-description">The <strong>flex-shrink</strong> property controls how a flex child item shrinks
-          when the browser window becomes more narrow. The default value is 1 - so each child item shrinks at the same
-          amount.</p>
-        <p>If there are 3 child flex items, and the width of the parent container shrinks 300px, each item will shrink
-          100px.</p>
-        <p>If the one child item's <strong>flex-shrink</strong> value is set to 2, and the other
-          flex
-          child items still have the default flex-shrink value of 1, the 300px will be split 4 ways (1 + 1 + 2). Two
-          items will shrink 75px and the child item with a flex-shrink value of 2 will shrink 150px.
+          when the browser window becomes more narrow. The default value is <code>1</code> - so when the flex parent
+          container is smaller than the total width of the flex child items, they'll shrink evenly.</p>
+        <p>Let's say we have a flex parent container that is 1200px wide and three child flex items that are each 400px
+          wide - filling the parent flex container.
+          If the parent container shrinks to 900px, the parent container loses 300px of space. All flex child items will
+          lose 100px and shrink to 300px by default. We can use the flex-shrink property so that a flex child item can
+          shrink at a different rate than its siblings.</p>
+
+        <p>If one flex child element has a flex-shrink value of 1, a second flex child element has a flex-shrink value
+          of 2, and a third has a flex-shrink value of 0, the child flex items will shrink at different rates. The 300px
+          of lost space is divided into 3 equal shares of 100px (1 + 2 + 0). The first item shrinks by 1 share (100px)
+          and is 300px wide. The second shrinks by 2 shares (200px) and is 200px wide. The third doesn't shrink at all
+          and is stll 400px wide.</p>
+
+        <p>A common way flex-shink is used is to set the flex-shrink value to 0 so that the flex child item doesn't
+          shrink. If the parent flex container becomes smaller than the width of the child flex item, the item will
+          "break out" of the container causing an overflow.
         </p>
-        <p>If the <strong>flex-shrink</strong> property's value is 0, the
-          flex child item will not shrink at all.</p>
-        <p>Try resizing the window. The width of the center box will stay the same while the outer boxes will shrink in
-          size. (on mobile - 200px, tablet - 400px, and
-          desktop - 800px.</p>
+        <p>Try making the browser window smaller. The width of the center box will stay the same (it's width should be 200px on mobile, 400px on tablet, and 800px on desktop.) The outer boxes will shrink in
+          size. You can use DevTools to inspect the width of the center box as you resize the window.</p>
         <div class="flex-row-parent-container content-parent-container">
-          <div class="child-box"></div>
+          <div class="child-box">
+          </div>
           <div class="child-box child-flex-shrink-box">
             <p>flex-shrink: 0;</p>
           </div>
-          <div class="child-box"></div>
+          <div class="child-box">
+          </div>
         </div>
         <h4>flex-grow</h4>
         <p class="property-description">The <strong>flex-grow</strong> property controls how much of the extra space
@@ -883,13 +928,12 @@
           size they're set to, even if there's additional space within the parent container.</p>
         <p>To take up the space within the parent container, the <strong>flex-grow</strong> values of all of the
           flex child items are added together and the extra space is divided into shares. If there is 400px of extra
-          space in the parent container with three flex child items and two of them have a <strong>flex-grow</strong>
-          value of 1,
-          the extra space is divided into two shares and each gets a single share of the extra space - 200px. The third
-          child item that still has the default value of 0 doesn't take up any of the extra space</p>
+          space in the parent container with three flex child items, and two of them have a <strong>flex-grow</strong>
+          value of <code>1</code> and the third has the default value of <code>0</code>, the 400px of extra space is divided into 2 shares (1 + 1 + 0). The two child items with a flex-grow value of <code>1</code> get a single share of the extra space - 200px. The third
+          child item with the default value of <code>0</code> doesn't take up any of the extra space</p>
         <p>If a single flex child item
           has a value of 1 and all others have a value of 0, the flex child item with a value of 1 takes all of the
-          extra space.</p>
+          extra space. Using DevTools, try clicking the strong>flex-grow</strong> property off and on to see the width of the center container change.</p>
         <div class="flex-row-parent-container content-parent-container">
           <div class="child-box"></div>
           <div class="child-box child-flex-grow-box">
@@ -948,8 +992,8 @@
       <div class="section-content-wrapper">
         <div class="description">
           <h3>order:</h3>
-          <p>Adding the <strong>order</strong> property to child flex item allows you to specify the order of the
-            content. The default value is <strong>0</strong>.</p>
+          <p>Adding the <strong>order</strong> property to a child flex item allows you to change the order of the items within the parent flex container. Each child flex item is given a number to specify its new position. Keep in mind that a screen reader will read the elements in the order they appear in your HTML. To make the site accessible, we want to avoid changing the order of elements if they require any input from the user like buttons or input fields.</p>
+            <p>The default value is <strong>0</strong>.</p>
         </div>
         <div class="two-column-layout">
           <div class="two-column-child">
