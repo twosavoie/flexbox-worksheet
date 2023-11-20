@@ -25,13 +25,13 @@
       <div class="section-content-wrapper">
         <div class="description">
           <h2>Welcome to Flexbox!</h2>
-          <p>Flexbox is a display property with a set of properties and values that allow you to create modern,
+          <p>Ready to learn a powerful display property that will allow you to position multiple items with a single property, specify how the items will be spaced out without adding margin or padding, and can be used both horizontally and vertically? Fantastic!! Flexbox is a display property with a set of properties and values that allow you to create modern,
             responsive
             layouts for websites. And after completing the Big Bad Guide to the Flexbox Model Worksheet you'll be on
             your way to becoming a Flexbox master!</p>
           <p>The first thing you'll notice when you open the Big Bad Guide to the Flexbox Model Worksheet is that there
-            are a lot of Flexbox properties and each one has multiple values. 😟 No worries! As you complete the
-            worksheet, you'll start to get a feel for how to use Flexbox. 🙌 Let's get started!!</p>
+            are a lot of Flexbox properties and each one has multiple values. 😰 No worries! As you complete the
+            worksheet, you'll start to get a feel for how to use Flexbox. 😁 Let's get started!!</p>
         </div>
       </div>
     </section>
@@ -64,77 +64,88 @@
 
     <section id="worksheet-rules" class="content-wrapper">
       <div class="section-content-wrapper">
-        <h2>How to complete the worksheet</h2>
-        <ul>
-          <li>Each lesson will prompt you on which section of the worksheet to complete next.</li>
-          <li>In the main.css file, use the comments to find the CSS for each section.</li>
-          <li>Start by centering the content-wrapper for the section by adding <code>display: flex;</code>. Then center
-            the content-wrapper with <code>justify-content: center;</code>.</li>
+        <div class="description">
+          <h2>How to complete the worksheet</h2>
           <ul>
-            <li>The "content-wrapper" has a purple background <span class="parent-color">Purple</span> which matches the
-              color you'll see in DevTools.</li>
+            <li>When you start each lesson you'll be prompted on which section of the worksheet to complete.</li>
+            <li>In the main.css file, use the comments to find the section for each Flexbox property. We've added all of the code blocks you'll need. You'll add the Flexbox properties and values.</li>
+            <li>The first step is to center the content-wrapper for the section. Start by adding <code>display: flex;</code>. Then
+              center
+              the content-wrapper with <code>justify-content: center;</code>.</li>
+            <ul>
+              <li>The "content-wrapper" has a purple background <span class="parent-color">Purple</span> which matches
+                the
+                color you'll see when you use DevTools.</li>
+            </ul>
+            <li>Then add the code for each Flexbox property and value. Start by adding <code>display: flex;</code>. Notice how the class name is a bit wordy? It contains the Flexbox property and its value.</li>
+            <ul>
+              <li>For instance, in the <code>.justify-content-center-parent-container</code> code block, add
+                <code>display: flex;</code> and <code>justify-content: center;</code> (leaving off the parent-container part.)
+              </li>
+              <li>The content boxes are blue <span class="content-color">Blue</span> which lines up with the color for
+                content in DevTools.</li>
+            </ul>
           </ul>
-          <li>For each Flexbox property's value, start by adding <code>display: flex;</code> and the Flexbox property
-            and value in
-            the class name.</li>
-          <ul>
-            <li>For instance in the <code>.justify-content-center-parent-container</code> code block, add
-              <code>display: flex;</code> and <code>justify-content: center;</code>.
-            </li>
-            <li>The content boxes are blue <span class="content-color">Blue</span> which lines up with the color for
-              content in DevTools.</li>
-          </ul>
-        </ul>
+        </div>
       </div>
     </section>
 
     <section id="flex-container-properties" class="content-wrapper">
       <div class="section-content-wrapper">
-        <h2>Flex Container Properties</h2>
-        <p>A Flexbox layout begins with a parent container. We use Flexbox container properties to arrange the child
-          flex items
-          within the parent container. And container properties specify what happens to any extra space within the
-          parent container.
-        </p>
-        <nav>
+        <div class="description">
+          <h2>Flex Container Properties</h2>
+          <p>A Flexbox layout begins with a parent container. We use Flexbox container properties to arrange the child
+            flex items
+            within the parent container. Container properties also specify what happens to any extra space within the
+            parent container, reducing the need to add margin or padding. 🙌
+          </p>
+          <nav>
+            <ul>
+              <li>Container properties: </li>
+              <li><a href="#justify-content-section">justify-content</a></li>
+              <li><a href="#align-items-section">align-items</a></li>
+              <li><a href="#flex-wrap-section">flex-wrap</a></li>
+              <li><a href="#align-content-section">align-content</a></li>
+              <li><a href="#gap-section">gap</a></li>
+              <li><a href="#flex-direction-section">flex-direction</a></li>
+              <li><a href="#flex-flow-section">flex-flow</a></li>
+            </ul>
+          </nav>
           <ul>
-            <li><a href="#justify-content-section">justify-content</a></li>
-            <li><a href="#align-items-section">align-items</a></li>
-            <li><a href="#flex-wrap-section">flex-wrap</a></li>
-            <li><a href="#align-content-section">align-content</a></li>
-            <li><a href="#gap-section">gap</a></li>
-            <li><a href="#flex-direction-section">flex-direction</a></li>
-            <li><a href="#flex-flow-section">flex-flow</a></li>
+            <li>Add <code>display: flex;</code> first to turn an element into a parent flex container</li>
+            <li>Flexbox container properties are added to the parent flex container to position its child (or children.)
+            </li>
+            <li>Decendents (grandchilden, great-grandchilren) don't inherit the grandparent's Flexbox styles. They need their 
+              own
+              parent flex container.</li>
           </ul>
-        </nav>
-        <ul>
-          <li>Add <code>display: flex;</code> first to turn an element into a parent flex container</li>
-          <li>Flexbox container properties are added to the parent flex container to position its child (or children.)
-          </li>
-          <li>Decendents (grandchilden, great-grandchilren) don't inherit the styles. Each flex child item needs its own
-            parent flex container.</li>
-        </ul>
+        </div>
       </div>
     </section>
 
     <!-- Item properties -->
     <section id="item-properties" class="content-wrapper">
       <div class="section-content-wrapper">
-        <h2>Flex Item Properties</h2>
-        <p>After laying out the child items within the parent container, sometimes you need to change the position of a
-          specific child flex item. That's where item properties come in. They can overwrite the container property for
-          a child flex item.</p>
-        <nav>
+        <div class="description">
+          <h2>Flex Item Properties</h2>
+          <p>After laying out the child items within the parent container, sometimes you need to change the position of
+            a
+            specific child flex item. That's where item properties come in. They can overwrite the container property
+            for
+            a child flex item.</p>
+          <nav>
+            <ul>
+              <li>Item properties: </li>
+              <li><a href="#flex-content-section">flex, flex-basis, flex-shrink, flex-grow</a></li>
+              <li><a href="#order-section">order</a></li>
+              <li><a href="#align-self-section">align-self</a></li>
+            </ul>
+          </nav>
           <ul>
-            <li><a href="#flex-content-section">flex, flex-basis, flex-shrink, flex-grow</a></li>
-            <li><a href="#order-section">order</a></li>
-            <li><a href="#align-self-section">align-self</a></li>
+            <li>Before adding a flex item property to a flex child item, add <code>display: flex;</code> to the parent
+              container. This will make Flexbox properties available.</li>
           </ul>
-        </nav>
-        <ul>
-          <li>Before adding a flex item property to a flex child item, add <code>display: flex;</code> to the parent
-            container. This will make Flexbox properties available.</li>
-        </ul>
+        </div>
       </div>
     </section>
     <!-- End Item properties -->
@@ -882,7 +893,8 @@
           property.
         </p>
         <p>If the parent flex container is too small to fit the width set with flex-basis, it will shrink based on its
-          <strong>flex-shrink</strong> value. Try reducing the width of the browser window. The center child flex item continues to be 600px until the parent flex container is too small to maintain this width.
+          <strong>flex-shrink</strong> value. Try reducing the width of the browser window. The center child flex item
+          continues to be 600px until the parent flex container is too small to maintain this width.
         </p>
         <div class="flex-row-parent-container content-parent-container">
           <div class="child-box"></div>
@@ -911,7 +923,8 @@
           shrink. If the parent flex container becomes smaller than the width of the child flex item, the item will
           "break out" of the container causing an overflow.
         </p>
-        <p>Try making the browser window smaller. The width of the center box will stay the same (it's width should be 200px on mobile, 400px on tablet, and 800px on desktop.) The outer boxes will shrink in
+        <p>Try making the browser window smaller. The width of the center box will stay the same (it's width should be
+          200px on mobile, 400px on tablet, and 800px on desktop.) The outer boxes will shrink in
           size. You can use DevTools to inspect the width of the center box as you resize the window.</p>
         <div class="flex-row-parent-container content-parent-container">
           <div class="child-box">
@@ -929,11 +942,14 @@
         <p>To take up the space within the parent container, the <strong>flex-grow</strong> values of all of the
           flex child items are added together and the extra space is divided into shares. If there is 400px of extra
           space in the parent container with three flex child items, and two of them have a <strong>flex-grow</strong>
-          value of <code>1</code> and the third has the default value of <code>0</code>, the 400px of extra space is divided into 2 shares (1 + 1 + 0). The two child items with a flex-grow value of <code>1</code> get a single share of the extra space - 200px. The third
+          value of <code>1</code> and the third has the default value of <code>0</code>, the 400px of extra space is
+          divided into 2 shares (1 + 1 + 0). The two child items with a flex-grow value of <code>1</code> get a single
+          share of the extra space - 200px. The third
           child item with the default value of <code>0</code> doesn't take up any of the extra space</p>
         <p>If a single flex child item
           has a value of 1 and all others have a value of 0, the flex child item with a value of 1 takes all of the
-          extra space. Using DevTools, try clicking the strong>flex-grow</strong> property off and on to see the width of the center container change.</p>
+          extra space. Using DevTools, try clicking the strong>flex-grow</strong> property off and on to see the width
+          of the center container change.</p>
         <div class="flex-row-parent-container content-parent-container">
           <div class="child-box"></div>
           <div class="child-box child-flex-grow-box">
@@ -992,8 +1008,12 @@
       <div class="section-content-wrapper">
         <div class="description">
           <h3>order:</h3>
-          <p>Adding the <strong>order</strong> property to a child flex item allows you to change the order of the items within the parent flex container. Each child flex item is given a number to specify its new position. Keep in mind that a screen reader will read the elements in the order they appear in your HTML. To make the site accessible, we want to avoid changing the order of elements if they require any input from the user like buttons or input fields.</p>
-            <p>The default value is <strong>0</strong>.</p>
+          <p>Adding the <strong>order</strong> property to a child flex item allows you to change the order of the items
+            within the parent flex container. Each child flex item is given a number to specify its new position. Keep
+            in mind that a screen reader will read the elements in the order they appear in your HTML. To make the site
+            accessible, we want to avoid changing the order of elements if they require any input from the user like
+            buttons or input fields.</p>
+          <p>The default value is <strong>0</strong>.</p>
         </div>
         <div class="two-column-layout">
           <div class="two-column-child">
