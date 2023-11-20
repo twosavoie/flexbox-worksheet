@@ -2,6 +2,7 @@
 /* Global styles */
 * {
   box-sizing: border-box;
+  line-height: 1.5;
 }
 
 body {
@@ -45,12 +46,16 @@ code {
   color: black;
 }
 
-a {
-  color: inherit;
+p, ul {
+  line-height: 1.5;
 }
 
-ul {
-  line-height: 1.5;
+li {
+  line-height: 2;
+}
+
+a {
+  color: inherit;
 }
 
 code {
@@ -650,10 +655,10 @@ section#flex-content-section {
 }
 
 .child-flex-shrink-box {
-  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .child-flex-grow-box {
