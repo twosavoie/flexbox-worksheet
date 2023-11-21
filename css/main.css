@@ -648,10 +648,10 @@ section#flex-content-section {
 }
 
 .child-flex-basis-box {
-  flex-basis: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-basis: 600px;
 }
 
 .child-flex-shrink-box {
@@ -709,7 +709,7 @@ section#order-section {
 
 /* end order */
 
-/* order */
+/* align-self */
 section#align-self-section {
   display: flex;
   justify-content: center;
@@ -744,4 +744,4 @@ section#align-self-section {
   align-self: stretch;
 }
 
-/* end order */
+/* end align-self */
